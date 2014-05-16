@@ -1,0 +1,73 @@
+\documentclass[conference]{IEEEtran}
+
+\usepackage[cmex10]{amsmath}
+
+\usepackage{abbrevs}
+\newabbrev\SSPARC{Shared spectrum access between radar and communications (SSPARC)}[SSPARC]
+
+\hyphenation{op-tical net-works semi-conduc-tor}
+
+
+\begin{document}
+
+\title{Some title}
+
+\author{\IEEEauthorblockN{Joseph H. Kim and Robert Baxley}
+\IEEEauthorblockA{Georgia Tech Research Institute,
+Atlanta, Georgia 30318\\
+Email: joseph.kim@gtri.gatech.edu, bob.baxley@gtri.gatech.edu}}
+\maketitle
+
+\begin{abstract}
+This paper is .
+\end{abstract}
+
+\section{Introduction}
+This demo file is intended to serve as a ``starter file''
+for IEEE conference papers produced under \LaTeX\ using
+IEEEtran.cls version 1.7 and later.
+
+\subsection{Subsection Heading Here}
+Subsection text here.
+
+
+\subsubsection{Subsubsection Heading Here}
+Subsubsection text here.
+
+
+\section{Radar Spreading}
+\SSPARC requires the mitigation of radar interference. One approach of this is to orthogonalize the communication and the radar signal.  Spectral spreading the communication with the radar signal is one way to approximate this orthogonalization.  The spread transmitted signal will be
+\begin{equation}
+\mathbf{y}=\mathbf{F}_r \mathbf{x}\\
+\label{eq1}
+\end{equation}  
+where $\mathbf{x}$ is the communication constellation symbols, $\mathbf{F}_r$ is the convolution matrix of the radar signal.
+
+The receiver will receive the signal
+\begin{equation}
+\mathbf{z}=\mathbf{F}_h \mathbf{F}_r \mathbf{x} + \boldsymbol{\beta} +\mathbf{n}\\
+\label{eq2}
+\end{equation} 
+where $\mathbf{F}_h$ is the channel effect, $\boldsymbol{\beta}$ is the radar signal.
+
+The pulse compression waveform of the radar signal allows for the following proprieties:
+\begin{equation}
+\mathbf{F}_r^H \mathbf{r} = [1,0,0,\dots,0,0]^T\approx\mathbf{0}\\
+\mathbf{F}_r^H \mathbf{F}_r
+\end{equation}
+
+
+ 
+\begin{thebibliography}{1}
+
+\bibitem{IEEEhowto:kopka}
+H.~Kopka and P.~W. Daly, \emph{A Guide to \LaTeX}, 3rd~ed.\hskip 1em plus
+  0.5em minus 0.4em\relax Harlow, England: Addison-Wesley, 1999.
+
+\end{thebibliography}
+
+
+
+
+% that's all folks
+\end{document}
