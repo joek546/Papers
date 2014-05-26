@@ -97,14 +97,14 @@ Having a high \PAR means that the signal power inefficient and is prone to non-l
 
 where $\mathcal{K}$ is a set of alternate signal, $\mathcal{A}$ is a set of combination value, and $\mathcal{E}$ is a set of allowed error values.  Since the combination value have very limited effect on the \PAR reduction, we will focus on the alternate signals and error values.
 \subsection{Alternate signals}
-the transmitted signal \eqref{eq1} can be expanded as
+Lets say there are multiple signals to represent the same information or get the same radar knowledge, than the transmitted signal \eqref{eq1} can be expanded as
 \begin{gather*}
 y^{(1)}=F_rx_1^{(1)}+F_rx_2^{(1)}+F_rx_3^{(1)}+\cdots \\
 y^{(2)}=F_rx_1^{(2)}+F_rx_2^{(2)}+F_rx_3^{(2)}+\cdots \\
 \vdots \\
 y^{(\mathcal{K})}=F_rx_1^{(\mathcal{K})}+F_rx_2^{(\mathcal{K})}+F_rx_3^{(\mathcal{K})}+\cdots
 \end{gather*}
-where $\mathcal{K}$ number of alternate way to represent same communication information or get the same radar knowledge and the receiver is aware of all the alternative possibility and determine which method was used.  We may be able to reduce \PAR by selecting a method that gives a signal with the lowest \PAR.  
+where $\mathcal{K}$ number of possible alternate signals. If the receiver is aware of all the alternative possibility and able to determine which signals was used.  We may be able to reduce \PAR by selecting a signal that gives the lowest \PAR.  
 \begin{figure}
 \includegraphics[width=\linewidth]{MCFig.eps}
 \caption{Monte Cario search of alternate signals}
