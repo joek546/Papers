@@ -1,21 +1,20 @@
 \documentclass[conference]{IEEEtran}
 
-\usepackage[cmex10]{amsmath}
-\usepackage{amssymb}
+%\usepackage[cmex10]{amsmath}
+\usepackage{amsmath,amsfonts,amssymb,bm}
 
 \usepackage{graphicx}
-\usepackage{epstopdf}
-\DeclareGraphicsExtensions{.eps,.pdf,.jpeg,.png}
+\usepackage{psfrag}             %overlay EPS figures with arbitrary LaTeX constructions
+\usepackage{pstool}				%defines \psfragfig, for including .eps/.tex figures from MATLAB/matlabfrag
+\usepackage{epstopdf}			%convert eps figures to pdf figures
 
-\usepackage{abbrevs}
+\usepackage{abbrevs}			%keeps track of all the abbreviations
 \newabbrev\SSPARC{Shared spectrum access between radar and communications (SSPARC)}[SSPARC]
 \newabbrev\PAR{peak to average power (PAR)}[PAR]
 
-\hyphenation{op-tical net-works semi-conduc-tor}
-
 \begin{document}
 
-\title{Some title}
+\title{Peak to Average Power Reduction Analysis of Radar Spread Communication Signal }
 
 \author{\IEEEauthorblockN{Joseph H. Kim and Robert Baxley}
 \IEEEauthorblockA{Georgia Tech Research Institute,
@@ -24,13 +23,11 @@ Email: joseph.kim@gtri.gatech.edu, bob.baxley@gtri.gatech.edu}}
 \maketitle
 
 \begin{abstract}
-This paper is .
+This paper is...
 \end{abstract}
 
 \section{Introduction}
-This demo file is intended to serve as a ``starter file''
-for IEEE conference papers produced under \LaTeX\ using
-IEEEtran.cls version 1.7 and later.
+Introduction here.
 
 \subsection{Subsection Heading Here}
 Subsection text here.
@@ -46,7 +43,7 @@ Subsubsection text here.
 \mathbf{y}=\mathbf{F}_r \mathbf{x}\\
 \label{eq1}
 \end{equation}  
-where $\mathbf{x}$ is the communication constellation symbols, $\mathbf{F}_r$ is the convolution matrix of the radar signal.  To maintain the proper size of the signal, $N_x\geq N_r$, and $\mathbf{F}_r$ is a circular convolution with zero padding of$N_x-N_r$ to be $N_x\times N_x$ matrix.
+where $\mathbf{x}$ is the communication constellation symbols, $\mathbf{F}_r$ is the circulant matrix of the radar signal.  To maintain the proper size of the signal, $N_x\geq N_r$, and $\mathbf{F}_r$ is a circular convolution with zero padding of$N_x-N_r$ to be $N_x\times N_x$ matrix.
 
 The receiver will receive the signal
 \begin{equation}
@@ -55,16 +52,17 @@ The receiver will receive the signal
 \end{equation} 
 where $\mathbf{F}_h$ is the channel effect, The radar signal $\mathbf{r}$ is zero padded to match the size of the communication signal.
 
-The pulse compression waveform of the radar signal allows for the following proprieties:
+Radar signals are generally composed of pulse compression waveform in order to decouple the range resolution and signal energy.  This pulse compression waveform of the radar signal allows for the following proprieties:
 \begin{equation}
-\mathbf{F}_r^H \mathbf{r} = [1,0,0,\dots,0,0]^T\approx\mathbf{0} \\
+\mathbf{F}_r^H \mathbf{r} \approx [1,0,0,\dots,0,0]^T\approx\mathbf{0} \\
 \label{prop1}
 \end{equation}
 \begin{equation}
 \mathbf{F}_r^H \mathbf{F}_r \approx \mathbf{I}
 \label{prop2}
 \end{equation}
-$H$ denotes the Hermitian conjugate of matrix and $T$ denote the Transpose of the matrix.
+$H$ denotes the Hermitian conjugate of matrix and $T$ denote the Transpose of the matrix.  The Hermitian conjugate of a circulant matrix is equal to the matched filter convolution matrix. \eqref{prop1} 
+
 The de-spreading of the signal is done by
 \begin{equation}
 \mathbf{\hat{x}}=\mathbf{F}^H\mathbf{z}
@@ -106,8 +104,15 @@ y^{(\mathcal{K})}=F_rx_1^{(\mathcal{K})}+F_rx_2^{(\mathcal{K})}+F_rx_3^{(\mathca
 \end{gather*}
 where $\mathcal{K}$ number of possible alternate signals. If the receiver is aware of all the alternative possibility and able to determine which signals was used.  We may be able to reduce \PAR by selecting a signal that gives the lowest \PAR.  
 \begin{figure}
-\includegraphics[width=\linewidth]{MCFig.eps}
-\caption{Monte Cario search of alternate signals}
+  \includegraphics[width=\linewidth]{MCFig.eps}
+  \caption{Monte Cario search of alternate signals}
+\end{figure}
+
+\begin{figure} %TRvsEVM
+  \centering
+  \psfragfig[width=\columnwidth]{TRvsEVM}%
+  \caption{enter caption here}%
+  \label{fig:compsim2}
 \end{figure}
 
 \begin{thebibliography}{1}
