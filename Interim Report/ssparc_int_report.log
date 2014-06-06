@@ -1,9 +1,7 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.4.29)  6 JUN 2014 13:38
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.4.29)  6 JUN 2014 18:42
 entering extended mode
-**Radar*Spreading*PAR*reduction.tex
-
-("C:\Users\jkim802\Documents\Papers\Radar Speading PAR reduction\Radar Spreadin
-g PAR reduction.tex"
+**ssparc_int_report.tex
+("C:\Users\jkim802\Documents\Papers\Interim Report\ssparc_int_report.tex"
 LaTeX2e <2011/06/27>
 Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
 abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
@@ -29,20 +27,17 @@ LaTeX Font Info:    Try loading font information for OT1+ptm on input line 368.
 ("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\ot1ptm.fd"
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
+** ATTENTION: Single column mode is not typically used with IEEE publications.
 -- Using 8.5in x 11in (letter) paper.
 -- Using PDF output.
 \@IEEEnormalsizeunitybaselineskip=\dimen104
--- This is a 10 point document.
+-- This is an 11 point document.
 \CLASSINFOnormalsizebaselineskip=\dimen105
 \CLASSINFOnormalsizeunitybaselineskip=\dimen106
 \IEEEnormaljot=\dimen107
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 726.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <5> not available
-(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 726.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 726.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <7> not available
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <6> not available
 (Font)              Font shape `OT1/ptm/b/it' tried instead on input line 726.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 726.
@@ -168,13 +163,10 @@ LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\amssymb.sty"
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\tools\bm.sty"
-Package: bm 2004/02/26 v1.1c Bold Symbol Support (DPC/FMi)
-\symboldoperators=\mathgroup6
-\symboldletters=\mathgroup7
-\symboldsymbols=\mathgroup8
-LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 138.
-LaTeX Info: Redefining \bm on input line 204.
+("C:\Program Files\MiKTeX 2.9\tex\latex\cite\cite.sty"
+LaTeX Info: Redefining \cite on input line 302.
+LaTeX Info: Redefining \nocite on input line 373.
+Package: cite 2010/09/10  v 5.3
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
 Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
@@ -396,8 +388,8 @@ L3 Module: l3candidates 2014/05/04 v4734 L3 Experimental additions to l3kernel
 \pstool@out=\write4
 \pstool@mainfile@ior=\read1
 \pstool@auxfile@ior=\read2
-runsystem(cd ""& copy "Radar*Spreading*PAR*reduction.aux" "Radar*Spreading*PAR*
-reduction.oldaux" )...executed.
+runsystem(cd ""& copy "ssparc_int_report.aux" "ssparc_int_report.oldaux" )...ex
+ecuted.
 
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\epstopdf.sty"
@@ -423,6 +415,17 @@ Package grfext Info: Graphics extension search list:
 G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 452.
 ))
+("C:\Program Files\MiKTeX 2.9\tex\latex\fancyhdr\fancyhdr.sty"
+\fancy@headwidth=\skip53
+\f@ncyO@elh=\skip54
+\f@ncyO@erh=\skip55
+\f@ncyO@olh=\skip56
+\f@ncyO@orh=\skip57
+\f@ncyO@elf=\skip58
+\f@ncyO@erf=\skip59
+\f@ncyO@olf=\skip60
+\f@ncyO@orf=\skip61
+)
 ("C:\Program Files\MiKTeX 2.9\tex\latex\frankenstein\abbrevs.sty"
 Package: abbrevs 2001/09/08 v1.4 abbreviation macros (Frankenstein's briefs)
 
@@ -450,22 +453,55 @@ File: abbrevs.cfg
 ("C:\Program Files\MiKTeX 2.9\tex\latex\ltxmisc\relsize.sty"
 Package: relsize 2003/07/04 ver 3.1
 )))
-("C:\Users\jkim802\Documents\Papers\Radar Speading PAR reduction\Radar Spreadin
-g PAR reduction.aux")
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
+("C:\Program Files\MiKTeX 2.9\tex\latex\fancyhdr\fancyheadings.sty"
+Package: fancyheadings 2008/02/04 1.99 Dummy package to call fancyhdr
 
-("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
+
+Package fancyheadings Warning: Please stop using fancyheadings!
+(fancyheadings)                Use fancyhdr instead.
+(fancyheadings)                We will call fancyhdr with the very same
+(fancyheadings)                options you passed to fancyheadings.
+(fancyheadings)                
+(fancyheadings)                fancyhdr is 99 percent compatible with
+(fancyheadings)                fancyheadings. The only incompatibility is
+(fancyheadings)                that \headrulewidth and \footrulewidth and
+(fancyheadings)                their \plain... versions are no longer length
+(fancyheadings)                parameters, but normal macros (to be changed
+(fancyheadings)                with \renewcommand rather than \setlength)..
+
+) ("C:\Users\jkim802\Documents\Papers\Interim Report\ssparc_int_report.aux"
+
+LaTeX Warning: Label `fig_sim' multiply defined.
+
+
+LaTeX Warning: Label `fig_sim' multiply defined.
+
+
+LaTeX Warning: Label `fig_sim' multiply defined.
+
+
+LaTeX Warning: Label `fig_sim' multiply defined.
+
+
+LaTeX Warning: Label `fig_sim' multiply defined.
+
+
+LaTeX Warning: Label `fig_sim' multiply defined.
+
+)
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+ ("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count134
 \scratchdimen=\dimen159
@@ -479,97 +515,205 @@ LaTeX Font Info:    ... okay on input line 15.
 \makeMPintoPDFobject=\count139
 \everyMPtoPDFconversion=\toks26
 )
-LaTeX Font Info:    Try loading font information for U+msa on input line 41.
+LaTeX Font Info:    Calculating math sizes for size <11> on input line 43.
+LaTeX Font Info:    Try loading font information for U+msa on input line 43.
  ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 41.
+LaTeX Font Info:    Try loading font information for U+msb on input line 43.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Package epstopdf Info: Source file: <MCFig.eps>
-(epstopdf)                    date: 2014-05-21 20:47:32
-(epstopdf)                    size: 14386 bytes
-(epstopdf)             Output file: <MCFig-eps-converted-to.pdf>
-(epstopdf)                    date: 2014-05-21 20:52:50
-(epstopdf)                    size: 6861 bytes
-(epstopdf)             Command: <epstopdf --outfile=MCFig-eps-converted-to.pdf 
-MCFig.eps>
-(epstopdf)             \includegraphics on input line 107.
-Package epstopdf Info: Output file is already uptodate.
-
-<MCFig-eps-converted-to.pdf, id=1, 512.91624pt x 437.635pt>
-File: MCFig-eps-converted-to.pdf Graphic file (type pdf)
-
-<use MCFig-eps-converted-to.pdf>
-Package pdftex.def Info: MCFig-eps-converted-to.pdf used on input line 107.
-(pdftex.def)             Requested size: 252.0pt x 215.0173pt.
- [1
-Non-PDF special ignored!{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ô in font ptmr7t!
 
 
-]
-\g__file_internal_ior=\read3
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 24.97896pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
 
-<TRvsEVM.pdf, id=21, 253.00522pt x 253.00522pt>
-File: TRvsEVM.pdf Graphic file (type pdf)
- <use TRvsEVM.pdf>
-Package pdftex.def Info: TRvsEVM.pdf used on input line 114.
-(pdftex.def)             Requested size: 253.0046pt x 253.0046pt.
+[1
+Non-PDF special ignored!{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}]
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ú in font ptmr7t!
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ù in font ptmr7t!
 
-Overfull \hbox (1.0046pt too wide) in paragraph at lines 114--114
- [][] 
+[2] [3]
+<../../ssparc/kathleen/MSSTriServiceRadarSymp/LaTeXfiles/Figure1.png, id=24, 52
+1.69907pt x 161.10187pt>
+File: ../../ssparc/kathleen/MSSTriServiceRadarSymp/LaTeXfiles/Figure1.png Graph
+ic file (type png)
+
+<use ../../ssparc/kathleen/MSSTriServiceRadarSymp/LaTeXfiles/Figure1.png>
+Package pdftex.def Info: ../../ssparc/kathleen/MSSTriServiceRadarSymp/LaTeXfile
+s/Figure1.png used on input line 152.
+(pdftex.def)             Requested size: 505.89pt x 156.22191pt.
+
+[4 <C:/Users/jkim802/Documents/ssparc/kathleen/MSSTriServiceRadarSymp/LaTeXfile
+s/Figure1.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 188--191
+
  []
 
 
-** Conference Paper **
-Before submitting the final camera ready copy, remember to:
+<../../ssparc/kathleen/SubbandSampling/paper/InOutNyquist.pdf, id=28, 794.97pt 
+x 614.295pt>
+File: ../../ssparc/kathleen/SubbandSampling/paper/InOutNyquist.pdf Graphic file
+ (type pdf)
 
- 1. Manually equalize the lengths of two columns on the last page
- of your paper;
+<use ../../ssparc/kathleen/SubbandSampling/paper/InOutNyquist.pdf>
+Package pdftex.def Info: ../../ssparc/kathleen/SubbandSampling/paper/InOutNyqui
+st.pdf used on input line 201.
+(pdftex.def)             Requested size: 165.67886pt x 141.99217pt.
+ [5]
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ú in font ptmr7t!
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ù in font ptmr7t!
+ [6 <C:/Users/jkim802/Documents/ssparc/kathleen/SubbandSampling/paper/InOutNyqu
+ist.pdf>]
+<../../ssparc/kathleen/MSSTriServiceRadarSymp/LaTeXfiles/Figure2top.pdf, id=54,
+ 614.295pt x 794.97pt>
+File: ../../ssparc/kathleen/MSSTriServiceRadarSymp/LaTeXfiles/Figure2top.pdf Gr
+aphic file (type pdf)
 
- 2. Ensure that any PostScript and/or PDF output post-processing
- uses only Type 1 fonts and that every step in the generation
- process uses the appropriate paper size.
+<use ../../ssparc/kathleen/MSSTriServiceRadarSymp/LaTeXfiles/Figure2top.pdf>
+Package pdftex.def Info: ../../ssparc/kathleen/MSSTriServiceRadarSymp/LaTeXfile
+s/Figure2top.pdf used on input line 248.
+(pdftex.def)             Requested size: 252.94499pt x 182.03581pt.
 
-runsystem(cd ""& del "Radar*Spreading*PAR*reduction.oldaux" )...executed.
+Overfull \hbox (20.74657pt too wide) in paragraph at lines 248--250
+[][] 
+ []
 
-[2
 
- <C:/Users/jkim802/Documents/Papers/Radar Speading PAR reduction/MCFig-eps-conv
-erted-to.pdf> <C:/Users/jkim802/Documents/Papers/Radar Speading PAR reduction/T
-RvsEVM.pdf>]
-("C:\Users\jkim802\Documents\Papers\Radar Speading PAR reduction\Radar Spreadin
-g PAR reduction.aux") ) 
+<../../ssparc/kathleen/MSSTriServiceRadarSymp/LaTeXfiles/Figure2bottom.pdf, id=
+56, 614.295pt x 794.97pt>
+File: ../../ssparc/kathleen/MSSTriServiceRadarSymp/LaTeXfiles/Figure2bottom.pdf
+ Graphic file (type pdf)
+
+<use ../../ssparc/kathleen/MSSTriServiceRadarSymp/LaTeXfiles/Figure2bottom.pdf>
+Package pdftex.def Info: ../../ssparc/kathleen/MSSTriServiceRadarSymp/LaTeXfile
+s/Figure2bottom.pdf used on input line 255.
+(pdftex.def)             Requested size: 252.94499pt x 182.0358pt.
+
+Overfull \hbox (20.74657pt too wide) in paragraph at lines 255--257
+[][] 
+ []
+
+
+<../../ssparc/kathleen/MSSTriServiceRadarSymp/LaTeXfiles/Figure3.pdf, id=58, 61
+4.295pt x 794.97pt>
+File: ../../ssparc/kathleen/MSSTriServiceRadarSymp/LaTeXfiles/Figure3.pdf Graph
+ic file (type pdf)
+
+<use ../../ssparc/kathleen/MSSTriServiceRadarSymp/LaTeXfiles/Figure3.pdf>
+Package pdftex.def Info: ../../ssparc/kathleen/MSSTriServiceRadarSymp/LaTeXfile
+s/Figure3.pdf used on input line 265.
+(pdftex.def)             Requested size: 271.0125pt x 190.22401pt.
+
+Overfull \hbox (38.81407pt too wide) in paragraph at lines 265--266
+[][] 
+ []
+
+
+<../../ssparc/kathleen/MSSTriServiceRadarSymp/LaTeXfiles/Figure4.pdf, id=60, 61
+4.295pt x 794.97pt>
+File: ../../ssparc/kathleen/MSSTriServiceRadarSymp/LaTeXfiles/Figure4.pdf Graph
+ic file (type pdf)
+
+<use ../../ssparc/kathleen/MSSTriServiceRadarSymp/LaTeXfiles/Figure4.pdf>
+Package pdftex.def Info: ../../ssparc/kathleen/MSSTriServiceRadarSymp/LaTeXfile
+s/Figure4.pdf used on input line 271.
+(pdftex.def)             Requested size: 252.94499pt x 139.30974pt.
+
+Overfull \hbox (20.74657pt too wide) in paragraph at lines 271--272
+[][] 
+ []
+
+
+<../../ssparc/kathleen/MSSTriServiceRadarSymp/LaTeXfiles/Figure5top.pdf, id=62,
+ 614.295pt x 794.97pt>
+File: ../../ssparc/kathleen/MSSTriServiceRadarSymp/LaTeXfiles/Figure5top.pdf Gr
+aphic file (type pdf)
+
+<use ../../ssparc/kathleen/MSSTriServiceRadarSymp/LaTeXfiles/Figure5top.pdf>
+Package pdftex.def Info: ../../ssparc/kathleen/MSSTriServiceRadarSymp/LaTeXfile
+s/Figure5top.pdf used on input line 363.
+(pdftex.def)             Requested size: 252.94499pt x 160.62727pt.
+
+Overfull \hbox (20.74657pt too wide) in paragraph at lines 363--364
+[][] 
+ []
+
+
+<../../ssparc/kathleen/MSSTriServiceRadarSymp/LaTeXfiles/Figure5bottom.pdf, id=
+64, 614.295pt x 794.97pt>
+File: ../../ssparc/kathleen/MSSTriServiceRadarSymp/LaTeXfiles/Figure5bottom.pdf
+ Graphic file (type pdf)
+
+<use ../../ssparc/kathleen/MSSTriServiceRadarSymp/LaTeXfiles/Figure5bottom.pdf>
+Package pdftex.def Info: ../../ssparc/kathleen/MSSTriServiceRadarSymp/LaTeXfile
+s/Figure5bottom.pdf used on input line 369.
+(pdftex.def)             Requested size: 252.94499pt x 156.75363pt.
+
+Overfull \hbox (20.74657pt too wide) in paragraph at lines 369--370
+[][] 
+ []
+
+[7 <C:/Users/jkim802/Documents/ssparc/kathleen/MSSTriServiceRadarSymp/LaTeXfile
+s/Figure2top.pdf> <C:/Users/jkim802/Documents/ssparc/kathleen/MSSTriServiceRada
+rSymp/LaTeXfiles/Figure2bottom.pdf>] [8 <C:/Users/jkim802/Documents/ssparc/kath
+leen/MSSTriServiceRadarSymp/LaTeXfiles/Figure3.pdf> <C:/Users/jkim802/Documents
+/ssparc/kathleen/MSSTriServiceRadarSymp/LaTeXfiles/Figure4.pdf> <C:/Users/jkim8
+02/Documents/ssparc/kathleen/MSSTriServiceRadarSymp/LaTeXfiles/Figure5top.pdf> 
+<C:/Users/jkim802/Documents/ssparc/kathleen/MSSTriServiceRadarSymp/LaTeXfiles/F
+igure5bottom.pdf>]
+("C:\Users\jkim802\Documents\Papers\Interim Report\ssparc_int_report.bbl")
+runsystem(cd ""& del "ssparc_int_report.oldaux" )...executed.
+
+
+[9] ("C:\Users\jkim802\Documents\Papers\Interim Report\ssparc_int_report.aux")
+
+LaTeX Warning: There were multiply-defined labels.
+
+ ) 
 Here is how much of TeX's memory you used:
- 9091 strings out of 493921
- 162316 string characters out of 3147276
- 209336 words of memory out of 3000000
- 12248 multiletter control sequences out of 15000+200000
- 45696 words of font info for 101 fonts, out of 3000000 for 9000
+ 9410 strings out of 493921
+ 168900 string characters out of 3147276
+ 210319 words of memory out of 3000000
+ 12529 multiletter control sequences out of 15000+200000
+ 43899 words of font info for 103 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 36i,9n,37p,10405b,264s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/fontname/8r
-.enc}<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:
-/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program
- Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/M
-iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Program Files/MiKTeX 2.9
-/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX 2.9/fonts/ty
-pe1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publi
-c/amsfonts/cm/cmmib10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfo
-nts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cm
-r7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:
-/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program
- Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program Files/Mi
-KTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Program Files/MiKTe
-X 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1
-/urw/times/utmbi8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmr8
-a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Program
- Files/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on "Radar Spreading PAR reduction.pdf" (2 pages, 251934 bytes).
+ 36i,12n,43p,10388b,368s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Program File
+s/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Program Files/MiKTeX
+ 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX 2.9/fon
+ts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1
+/public/amsfonts/cm/cmmi6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/a
+msfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/c
+m/cmmi9.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmib10
+.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cmextra/cmmib8.pf
+b><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Pro
+gram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files
+/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 
+2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX 2.9/fonts
+/type1/public/amsfonts/cm/cmsy9.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/pu
+blic/amsfonts/symbols/msam10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/t
+imes/utmb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><
+C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Program Files/
+MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
+Output written on ssparc_int_report.pdf (9 pages, 376533 bytes).
 PDF statistics:
- 100 PDF objects out of 1000 (max. 8388607)
+ 164 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 11 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 83 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -1,0 +1,421 @@
+\documentclass[11pt,onecolumn]{IEEEtran}
+
+\usepackage{amsmath, amsfonts, amssymb}		%Allow math, fonts, and symbols features
+\usepackage{cite}							%Bibtex citation
+
+%packages for figures and graphics
+\usepackage{graphicx}						%Allows to add figures
+\usepackage{psfrag,pstool}					%Overlay Matlab EPS figures with LaTex constructions
+\usepackage{epstopdf}						%Convert EPS figures to PDF
+
+% klt temporary placeholder figures --- finals will be matlab in local Interim Rpt dir
+\graphicspath{../../ssparc/kathleen/MSSTriServiceRadarSymp/LaTeXfiles/}
+\DeclareGraphicsExtensions{.png,.pdf,.eps}  
+% klt done temp figures
+
+\usepackage{fancyhdr}% http://ctan.org/pkg/fancyhdr
+\pagestyle{fancy}% Change page style to fancy
+\fancyhf{}% Clear header/footer
+\fancyhead[C]{\textbf{Spectral and Spatial Artifact Suppression for RF Devices} - {June 2014 Interim Report}\\
+DARPA-BAA-13-24 DARPA SSPARC; Contract No. HR001114C0025}
+\usepackage{abbrevs}						%Easy management of all the abbreviations
+\newabbrev\SSPARC{Shared spectrum access between radar and communications (SSPARC)}[SSPARC]
+\newabbrev\RF{radio frequency (RF)}[RF]
+\newabbrev\PAR{peak-to-average power ratio (PAR)}[PAR]
+\newabbrev\OMP{orthogonal memory polynomial (OMP)}[OMP]
+\newabbrev\SINR{signal-to-interference-plus-noise ratio (SINR)}[SINR]
+\newabbrev\SNR{signal-to-noise ratio (SNR)}[SNR]
+\newabbrev\OFDM{orthogonal frequency-division multiplexing}[OFDM]
+\newabbrev\AWGN{additive white Gaussian noise (AWGN)}[AWGN]
+
+\newabbrev\CM{constant modulus (CM)}[CM]
+
+\usepackage{fancyheadings} % need this for the headings stuff
+\pagestyle{fancyplain} % need this for the headings stuff
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\title{\Large{\textbf{Spectral and Spatial Artifact Suppression for RF Devices}\\
+DARPA-BAA-13-24 DARPA SSPARC}}
+\begin{document}
+%\maketitle
+\vspace{10mm}
+\section{Summary} 
+\textcolor{red}{$\Box$make vspace work to bump heading I down?}\\What we did, what’s left to do, how we intend to approach the remaining work
+\section{Introduction}
+Enabling shared spectrum access between radio and radar systems is an important objective that will mitigate spectrum congestion.  Solutions to solve this objective will require dynamic allocation of time/frequency/space slots among all spectral users.  Regardless of the allocation approach, precise signal containment in both spectral and spatial dimensions is required.  After all, without the ability to limit a signal to a desired spatial/spectral window, allocation optimization becomes irrelevant.\par
+
+
+\subsection{SSPARC\textcolor{red}{\fbox{?}delete this subheading?}}
+the general SSPARC problem ...
+the general \SSPARC problem ...
+Enabling shared spectrum access between radio and radar systems is an important objective that will mitigate spectrum congestion.  Solutions to solve this objective will require dynamic allocation of time/frequency/space slots among all spectral users.  Regardless of the allocation approach, precise signal containment in both spectral and spatial dimensions is required.  After all, without the ability to limit a signal to a desired spatial/spectral window, allocation optimization becomes irrelevant.\par
+
+This work contains several innovations that can be decomposed into two categories: i) techniques to reduce the errantly transmitted energy due to nonlinear distortions in \SSPARC radios and radars, and ii) techniques that operate on the receiver side to mitigate nonlinearly distorted signals.  All of the proposed innovations aim to increase concurrent operating capability of radar and communication systems.  The proposed innovations can be applied to either codesign or coexistence \SSPARC systems.  Furthermore all of these innovations can be agnostically paired to other \SSPARC mechanisms that are proposed by other bidders.
+
+
+This work contains several innovations that can be decomposed into two categories: i) techniques to reduce the errantly transmitted energy due to nonlinear distortions in SSPARC radios and radars, and ii) techniques that operate on the receiver side to mitigate nonlinearly distorted signals.  All of the proposed innovations aim to increase concurrent operating capability of radar and communication systems.  The proposed innovations can be applied to either codesign or coexistence SSPARC systems.  Furthermore all of these innovations can be agnostically paired to other SSPARC mechanisms that are deleloped by other\line(1,0){50}  \textcolor{red}{$\Box$ insert term for SSPARC participants ... was ``bidders.''}
+\subsection{SSAS Problem Discussion
+ (Pull material from proposal; outline all three thrusts)}
+\subsubsection{Thrust 1. Algorithms to mitigate spectral artifacts for multiplexed signals}
+It is well-known that signals with high dynamic range tend to be distorted by system nonlinearities.  It is possible to have low amounts of distortion even for signals with high dynamic range, but this comes at the expense of low power efficiency.  That is, reducing dynamic range can improve the operating point of a system in the distortion-power-efficiency trade-off space. Ideally, signals are designed to either be constant modulus (CM) or have a low peak-to-average power ratio (PAR).
+
+Shaping radar signals to be CM is relatively easy since radar signals do not carry information and are not multiplexed with other signals.  However, when other signals are multiplexed or when information is encoded in the signaling, the problem is much more complicated.  Under the SSPARC paradigm, nodes may transmit multiplexed signal aggregation that contain both communications signals and radar signals. 
+While multiplexing both deterministic signaling (radar) and information-bearing signaling (communications) through the same radio frequency (RF) transmit chain will necessarily increase the signal PAR on average and thus increase nonlinear distortions, signal multiplexing also provides additional degrees of freedom for optimizing the joint signal.  Our innovation is to leverage our past experience in minimizing nonlinear distortion for communications signals to solve this new problem of minimizing the distortion for radio/radar multiplexed signals.  Our solution will be applicable for both the codesign and the coexistence paradigms.  
+It is well-known that signals with high dynamic range tend to be distorted by system nonlinearities.  It is possible to have low amounts of distortion even for signals with high dynamic range, but this comes at the expense of low power efficiency.  That is, reducing dynamic range can improve the operating point of a system in the distortion-power-efficiency trade-off space. Ideally, signals are designed to either be \CM or have a low \PAR.
+Shaping radar signals to be \CM is relatively easy since radar signals do not carry information and are not multiplexed with other signals.  However, when other signals are multiplexed or when information is encoded in the signaling, the problem is much more complicated.  Under the \SSPARC paradigm, nodes may transmit multiplexed signal aggregation that contain both communications signals and radar signals. 
+While multiplexing both deterministic signaling (radar) and information-bearing signaling (communications) through the same \RF transmit chain will necessarily increase the signal PAR on average and thus increase nonlinear distortions, signal multiplexing also provides additional degrees of freedom for optimizing the joint signal.  Our innovation is to leverage our past experience in minimizing nonlinear distortion for communications signals to solve this new problem of minimizing the distortion for radio/radar multiplexed signals.  Our solution will be applicable for both the codesign and the coexistence paradigms.  
+
+\subsubsection{Thrust 2.  Algorithms to mitigate spatial artifacts for spatially shaped signals}
+In multi-antenna systems signals are sent to each antenna element and then weighted and/or “phased” to achieve a desired aggregate beam pattern.  When there is unmitigated nonlinear distortion in the RF chain, due to the power amplifier, for instance, the beam pattern of the transmission will also be distorted.  We propose two innovations for correcting this problem:
+\renewcommand{\theenumi}{\roman{enumi}}%
+\begin{enumerate}
+\item Optimizing beamforming weights with nonlinear Tx chains: We will optimize the transmitting beam pattern by taking the nonlinear distortion into account when determining the beam weights.  
+\item Minimizing beam error through signal modification: A more holistic approach is to jointly optimize signal distortion and the antenna weights.  This will provide better performance, but may not be possible in certain systems where the signal processing for the transmit signaling is separated from the beam-weight optimization signal processing.  When joint optimization is possible, the PAR of the transmitting signal is jointly optimized with the beam weights.  Under this paradigm, we can also optimize the signal to minimize spectral splatter, thereby performing the spectral and spatial optimizations in a coupled way through a single globally optimization procedure.
+\end{enumerate}
+
+\subsubsection{Thrust 3.  Receiver-side mitigation of spectral artifact noise}
+The nonlinear distortion caused by RF chains exhibits specific qualities defined by the nonlinear distortion function.  For example, the distortion from clipping nonlinearities tends to have a non-Gaussian and non-white distribution.  Our innovation is to use this information at the receive side of radars/radios to improve the system performance.  For instance, communications signals are drawn from a finite signal constellation.  With knowledge of the constellation, as well as partial information about the nonlinearities, we can use decision-directed techniques to subtract distorted communications inference from signal of interest.  
+The low-entropy signals typically used as radar sounding pulses are also amenable to being subtracted from desired signals. This can be more complicated or impossible if the radar signal saturates the receiver front end.  However, often, high-power radars will be given a large guard band so that users are separated by large spectral distances.  In this situation, the interference to neighboring users is purely nonlinear distortion of the radar signal.  We are proposing to use decision-directed techniques coupled with noise whitening techniques to mitigate this kind of adjacent channel interference. 
+
+
+
+Example of citation by \cite{postema87}
+\section{Thrust 1-PAR Reduction for Signal Aggregation}
+\subsection{Detailed problem statement}
+
+When multiple signals are multiplexed, the aggregate signal will have a high probability of having a high \PAR.  This is a result of the Central Limit Theorem in that the sum distribution of the multiplexed signal approaches complex Gaussian.  Having a high \PAR means that the signal power is inefficient and prone to non-linear distortion from power amplifier.  However, a multiplexed signals have more degrees of freedom for lowering the \PAR.
+
+For any linear modulated signal, the signal can be generalized as set of linear equations $\mathbf{\tilde{x}}=\mathbf{Ax}$, where $\mathbf{A}$ is the linear modulation such as $\mathbf{A}=\mathbf{I}$ for single carrier, $\mathbf{A}=\mathbf{H}$ for Hadamard spreading (CDMA), $\mathbf{A}=\mathbf{Q}^H$ for OFDM, and etc.  Than multiplexed signals can be aggregated linearly as
+\begin{equation}
+\begin{aligned}
+\mathbf{\tilde{x}}&=\mathbf{A}_1\mathbf{x}_1+\mathbf{A}_2\mathbf{x}_2+\mathbf{A}_3\mathbf{x}_3+\cdots\\
+&=\sum_{p=1}^P\mathbf{A}_p\mathbf{x}_p
+\end{aligned}
+\label{aggsig}
+\end{equation}
+where $A$ is the linear modulation such as $A=I$ for single carrier, $A=H$ for Hadamard spreading (CDMA), $A=Q^H$ for OFDM, and ect.
+From \eqref{aggsig} we have three degree of freedom to optimize the aggregated signal in reducing the \PAR.  
+\begin{equation}
+{\mathbf{\tilde{x}}}=\sum_{p=1}^P\alpha_p\mathbf{A}_p\left(\mathbf{x}_p^{(k)}+\mathbf{\epsilon}_p^{(k)}\right)
+\label{xGen}
+\end{equation}
+where $\alpha_p\in\mathcal{A}_p$ is a set of combination value, $k\in \mathcal{K}$ is a set of alternate signal, and $\epsilon_p^{(k)}\in\mathcal{E}_p$ is a set of perturbed error values.  Each of these terms can be manipulated to optimize the \PAR.
+
+\PAR generally is defined by
+\begin{equation}
+PAR(\mathbf{x})=\frac{\Vert x \Vert^2_\infty}{\Vert x \Vert^2_2/N_x}
+\label{PARGen}
+\end{equation}
+where $\Vert\cdot\Vert_l$ denotes the $l$-norm of the vector.  Combining \eqref{xGen} and \eqref{PARGen} you get
+\begin{equation}
+PAR(\mathbf{\tilde{x}})=\frac{\Vert \sum_{p=1}^P\alpha_p\mathbf{A}_p\left(\mathbf{x}_p^{(k)}+\mathbf{\epsilon}_p^{(k)}\right) \Vert^2_\infty}{\Vert \sum_{p=1}^P\alpha_p\mathbf{A}_p\left(\mathbf{x}_p^{(k)}+\mathbf{\epsilon}_p^{(k)}\right) \Vert^2_2/N_x}
+\end{equation}
+A general \PAR reduction problem for any aggregated linear modulation signal can be written as
+\begin{equation}
+     \begin{aligned}
+      &\text{Minimize } & &\left\Vert\sum_{p=1}^P\alpha_pA_p\left(x_p^{(k)}+\epsilon_p^{(k)}\right)\right\Vert_\infty  \\
+      &\text{Subject to} &  &k\in \mathcal{K} \\
+      & & &\alpha_p\in\mathcal{A}_p\\
+      & & &\epsilon_p^{(k)}\in\mathcal{E}_p 
+     \end{aligned}
+\end{equation}
+
+
+In \cite{seung05} something something
+\subsection{Analytical/Simulation Results}
+\subsection{Lab results}
+\subsection{Outlook and remaining work}
+\section{Thrust 2:  Spatial Shaping with Nonlinear Components}
+\subsection{Detailed problem statement}
+\subsection{Analytical/Simulation Results}
+\subsection{Lab results}
+\subsection{Outlook and remaining work}
+
+\section{Thrust 3}
+\subsection{Detailed problem statement}  paper \#1:  Receiver cancellation of radar in radio + paper \#2:  Subsampling in Receiver Cancellation\hspace{3mm} \textcolor{red}{$\Box$ tailor generic part for RX given Bob's intro II-3.}\par
+Shared spectrum access between radar and communications (SSPARC) compels changes in traditional approaches to spectrum management, requiring innovations throughout the system, particularly in techniques to mitigate interference at both the transmitter and at the receiver.  This paper develops and implements algorithms for communications receivers to reduce the effects of nonlinear interference due to an interfering radar transmitter.  To ensure realism, power amplifier measurements are performed to capture the spectral broadening, \emph{i.e.}, to characterize and model the interference due to nonlinear effects at the transmitter.  The measured data is post-processed to analyze the performance of receiver-based algorithms to cancel interference.  Results are quantified in terms of performance improvement versus separation in frequency and distance between the desired communications signal and radar interferer.\par
+
+$\theta \phi \lambda \sigma \Delta \Box \ddots$
+$\Box \lambda$
+
+\subsection{Analytical/Simulation Results}
+\subsection{Lab results}
+
+\subsubsection{Limited Coexistence of Radar and Communications}
+Historically, wireless systems and radar systems were unable to coexist.  Mitigation of interference generally meant avoidance:  overlap in resources such as time, space, and frequency was not considered viable, and was usually prohibited.  However, it has been reported in a WiMax wireless network, that radar pulses can be transmitted during the temporal guard intervals or confined to spectral guard bands, demonstrating that ``white space'' sharing of resources is possible without degrading performance \cite{Cohen10}.  Other avoidance-based mitigation techniques between radar and radio are reported in \cite{Lackpour} and \cite{WiMAXForum}.  
+
+\subsubsection{Receiver-based Mitigation of Interference in Communication Systems} 
+Mitigating interference in scenarios with overlapping resources has been shown to be feasible in communications, even though traditional methods, such as spatial nulling techniques and filtering, are not effective against co-located, or in-band interferers, respectively.  For example, a space-time adaptive processing method to suppress a co-located jammer signal using the jammer's multipath signals has been reported in \cite{Kogon}.  Cancellation of spectral self-interference in a full-duplex cellular handset, where the nonlinear spectral expansion of the transmitter causes self-interference to the receiver, has also been reported.  In this method, the transmitter's out-of-band distortion is estimated, reconstructed based on a model of the power amplifier nonlinearity, then subtracted at the receiver \cite{Omer}.  This technique can be extended to a distant receiver assuming the required side information is available at the receiver.  \par
+In \cite{Gazda}, a simple iterative cancellation technique based on a soft-limiting model of a power amplifier is reported for a single-carrier frequency-division multiple access communications system.  An extensive review of other communications receiver-side mitigation techniques addressing communications power amplifier nonlinearities, is given in \cite{Gregorio}.  It includes results based on a Wiener-Hammerstein model in an iterative decision-based technique that addresses both power amplifier memory effects and channel fading in an \OFDM communications system.
+\begin{figure*}[t!]   % use the * star figure environment to make it span 2 columns
+\centering
+\includegraphics[width=7.0in]{../../ssparc/kathleen/MSSTriServiceRadarSymp/LaTeXfiles/Figure1.png}  % name it figure1.eps
+\caption{Block diagram and photo of measurement setup \textcolor{red}{$\Box$ add the new tikz version}}
+\label{fig_sim}
+\end{figure*}
+
+\textcolor{red}{Revise and find a place for this intro section}\\Sub-band sampling is a technique to reduce the required measurement bandwidth at the receiver, thereby enabling applications to wider bandwidth signals.  It can also reduce computational complexity.   Initial measurements were performed with 25x oversampling to ensure accuracy and to capture short term memory effects.  A long measurement interval is also desired to ensure observations of representative behavior, and to capture long term memory effects.  These guidelines can lead to very large sample sets, and correspondingly high computational complexity.  Depending on the computational approach, the calculation of the psuedoinverse of a very large matrix containing all the measured samples, could be a limiting factor impeding successful construction of a nonlinear model.  Hence, sub-sampling, a technique that results in less data by sampling at lower rates, is of interest to reduce computational complexity without sacrificing model accuracy.  Sub-sampling can also be applied to a targeted spectral range, i.e., to extract a model from a limited bandwidth, a sub-band of the full spectrum.
+
+\subsubsection{Power Amplifier Models}
+Interference cancellation techniques rely on accurate models of the power amplifier.  Recent trends in power amplifier modeling  \cite{ZhuSimpl, Ding, Raich, Zhuprune} favor variations of a Volterra model \par
+%\begin{flushright}
+
+\begin{equation}\label{eq1}
+y(t) = \sum_{k=1}^K\int\dots\int h_k( \boldsymbol{\tau_k})\prod_{i=1}^kx(t-\tau_i)d \boldsymbol{\tau_k}
+\end{equation}
+%\end{flushright}
+where $y(t)$ and $x(t)$ are the output and input of the power amplifier, respectively, $K$ is nonlinear order, $t$ is time, and $\tau_i$ represents delay.  
+The terms $h_k(\boldsymbol{\tau_k})$ are the Volterra coefficients \cite{Zhuprune}.  Special cases of the Volterra model have been considered to reduce computational complexity, for example,  memory polynomials, representing the diagonal terms of the Volterra model \cite{Ding}.  \par
+The main disadvantage of the Volterra model is that its characterization requires a large number of coefficients.  Furthermore, the accuracy of this approach may be degraded if the system of coefficient equations is ill-conditioned, leading to significant changes in output results for relatively small fluctuations in the input data.  Memory polynomials, while simpler in form, have similar issues.  In \cite{Raich}, this is addressed by creating orthogonal polynomial basis functions in the signal sample space, leading to better convergence and improved numerical stability. 
+
+\subsection{Mathematical Set-up for Matrix Sub-Sampling}
+Given a specific power amplifier model, we can represent the transmitted signal $\boldsymbol{y}$, a column vector of N collected samples, as 
+\begin{equation} \label{eqyAc}
+\boldsymbol{y} = \boldsymbol{Ac},
+\end{equation}
+where $\boldsymbol{A}$ is an N x K matrix of memory monomial terms with maximum order K and $\boldsymbol{c}$ is a K x 1 vector of coefficients.  The objective of power amplifier modeling is to find $\boldsymbol{c}$ in Eq. \ref{eqyAc}, characterizing the nonlinearities of the amplifier. 
+
+The channel,  receive filter, and receiver noise may be included as
+\begin{equation}\label{eqyFrxh}
+\boldsymbol{y} = \boldsymbol{F}_{Rx}\boldsymbol{F}_h\boldsymbol{Ac} + \boldsymbol{n},
+\end{equation}
+where $\boldsymbol{F}_{Rx}$ and $\boldsymbol{F}_h$ represent convolution matrices for the receive filter and channel, respectively, and $\boldsymbol{n}$ is an N x 1 vector of AWGN samples.  In this form, downsampling may be implemented by deleting corresponding rows of $\boldsymbol{y}$, the product matrix $\boldsymbol{F}_{Rx}\boldsymbol{F}_h\boldsymbol{A}$, and $\boldsymbol{n}$.  \textcolor{red}{\fbox{?} add Bob's pptx cartoon in tikz?}
+%\Box
+%\square
+ 
+Using a ``puncturing matrix'' $\boldsymbol{P}$ to represent the operation of deleting rows, this becomes										\begin{equation}\label{eqPy}
+\boldsymbol{Py} = \boldsymbol{P}(\boldsymbol{F}_{Rx}\boldsymbol{F}_h\boldsymbol{Ac}) + \boldsymbol{Pn},
+\end{equation}
+where $\boldsymbol{P}$ is a puncturing operator that deletes specified lines in a matrix or vector.
+\\
+
+
+\subsection{Nyquist Sampling}
+In conventional signal processing, where the goal is to reconstruct an analog signal based on discrete samples, Nyquist-Shannon sampling theorem dictates that the sampling rate be twice the highest frequency of the signal bandwidth\cite{Liu96Spec}.  In many applications of power amplifier modeling, \textit{e.g.}, analog predistortion, the output nonlinearities have significant spectral content extending to six times the input signal bandwidth\cite{Park02Adap}.  Hence, for wideband applications, the required sampling rates can be quite high.  To illustrate, input and output signals are shown in Fig. \ref{fig_Nyquist}, with a sampling frequency pictorially represented in each case so that the signal and its image do not overlap.  However, in this work, the goal is to model the power amplifier nonlinearities; it is not necessary to reconstruct the information-bearing signal.   In this case, we expect to be able to sample below the output Nyquist rate, and possibly given certain circumstances, even below the input Nyquist rate
+\cite{Liu96Spec}\cite{Park02Adap}.  \textcolor{red}{\fbox{?} convert these pdf to tikz?  use subfigures or separate figures for captioning?}
+\begin{figure}[t!]   % use the * star figure environment to make it span 2 columns
+\centering
+%\setlength{\fboxsep}{0pt}%
+%\setlength{\fboxrule}{1pt}%
+%\fbox{
+\includegraphics[trim=50mm 90mm 100mm 15mm, clip=true,  width=3.25in, scale=0.45]{../../ssparc/kathleen/SubbandSampling/paper/InOutNyquist}
+%}
+% name it figure1.eps
+% where an .eps filename suffix will be assumed under latex, 
+% and a .pdf suffix will be assumed for pdflatex; or what has been declared
+% via \DeclareGraphicsExtensions.
+\caption{\textcolor{red} {$\bigcirc$make subfig work}  Top:  Input Nyquist sampling.  Bottom:  Output Nyquist sampling}
+\label{fig_Nyquist}
+\end{figure}
+
+\subsubsection{Reduced Sampling Rate}
+As the sampling rate is reduced, the specifications on the anti-aliasing filters may become more stringent.  Furthermore, as the sampling period increases, we may not be able to characterize short term memory effects, \emph{i.e.}, insufficient temporal resolution may impede the capture of memory effects.  However, clearly reduction in computational complexity can be realized, simply by reducing the amount of oversampling.
+
+\subsubsection{Undersampling}
+According to the Generalized Sampling Theorem, a nonlinear system can be characterized accurately when the output signal is sampled at the \emph{input} Nyquist rate\cite{Tsimbinos94}.  In \cite{Park02Adap}, up to 133\% overlap in output spectra is allowed and ... \textcolor{red}{\fbox{.} add JSK Joon results.}   In other words, sampling below Nyquist rate is acceptable because we don't need to fully reconstruct the signal.  Furthermore, we may be able to relax the antialiasing filter requirements, because the out-of-band nonlinear distortion that we are concerned with, is typically 40 - 60 dB below the in-band spectra, so the presence of aliased images of the distortion, should not affect our signal. 
+
+\subsubsection{Targeted sub-band sampling}
+Since our objective is to cancel nonlinear radar interference affecting a communications signall, in principle, we only need to model a relatively narrow bandwidth in the spectral neighborhood of a communications signal.  This is generally a significantly small bandwidth than the entire radar bandwidth plus spectral splatter.  Since the model only needs to be valid for a limited bandwidth, the sampling rate can be reduced further.  In this case, the Generalized Nyquist Theorem states that the sampling frequency only needs to be twice as large as the bandwidth of interest.  Furthermore, by judicious selection of the sampling frequency, we may be able to  characterize the image of the signal to extract our model using a significantly lower sampling rate.
+
+\subsubsection{Swept sampling} If reducing the sampling rate obscures important memory effects, it may be possible to inplement a nonuniform sampling rate to capture short timescale events but keep the number of samples low.  An offset sampling technique might also capture memory effects while allowing a low sampling rate.
+
+\subsubsection{Radar despreading \textcolor{red}{??} and subsampling}  \textcolor{red}{add text}
+
+
+
+\subsubsection{Contributions to Prior Art \textcolor{red}{$\Box$ revise/delete}}
+This paper addresses interference cancellation in \mbox{SSPARC} systems, extending receiver-based interference cancellation techniques developed for an interfering communications source.  As described in Section II, we will demonstrate how a communications receiver can use information about a radar transmission to estimate the adjacent band spectral leakage from the radar.  Once the leakage signal is estimated, it is subtracted from the communications signal thereby improving the communication system performance.  In Section III, we quantify this performance improvement.
+
+\subsubsection{Measurement Setup}
+Fig. 1 is a block diagram of the measurement test bed with a photo of the actual setup.  The test bed consists of a National Instruments PXIe-8130 Embedded Controller, two PXIe-5663 6.6-GHz RF vector signal analyzers (RFSAs) with 50-MHz instantaneous bandwidth, a PXIe-5673 6.6-GHz RF vector signal generator (RFSG) with 100-MHz instantaneous bandwidth, and an HP E4433B signal generator  (ESG).  Measurements are automated in LabVIEW.  Using this setup, a wideband interferer and a desired signal are represented as band-limited AWGN, a scenario typically considered to be “worst case.”  The device under test, for the dataset presented below, is a high-power Class AB power amplifier optimized for a carrier frequency of 2.14 GHz.
+
+\subsubsection{Measurement Procedure }
+Referring to Fig. 1, a wideband signal is generated by the RFSG and amplified by the power amplifier; this signal represents interference from a distant radar transmitter.  A narrowband signal is generated by the ESG, representing a lower power communications signal, \emph{i.e.}, the desired signal.  The input and reference output of the power amplifier, and the combined signal (power amplifier output plus narrowband lower power signal) are measured for post-processing.
+
+\subsubsection{Post-Processing Procedure}
+Using the measured input and reference output containing only the wideband amplified interference signal, coefficients  $h_k( \boldsymbol{\tau_k})$ for a Volterra model are determined as in (1).  Delay is parameterized by a maximum memory length M, \emph{i.e.}, the longest delay is represented by M\hspace{1pt}\textendash\hspace{0.25pt}1 sampling steps.  \OMP are also considered.  For either case, once the parameters of the model are determined through measurements and subsequent post-processing, the extracted model is used to generate an estimate of the adjacent-band spectral expansion.  This cancellation signal is subtracted from the received signal in simulations, to improve \SINR at the receiver.  In this manner, post-processing of measured data and simulated interference cancellation is used to determine performance as a function of varying RF frequency offset between the desired signal and the interferer.  Receiver \SINR is presented versus both the distance between the interferer and the receiver, and the receiver \SNR.
+
+
+\subsection{Lab Results}
+\subsubsection{Measurements}
+Measured data for the input and reference interference output of the power amplifier, \emph{i.e.}, without the desired signal, is shown in Fig. 2 for an input power of 10 dBm.  To show a higher level of distortion, measured data for the input and output of the power amplifier plus the desired signal is shown in Fig. 3 for an input power of 12 dBm.  
+\DeclareGraphicsExtensions{.pdf}
+
+
+\begin{figure}[ht]
+\centering
+\begin{minipage}[b]{0.45\linewidth}
+\includegraphics[trim=35mm 88mm 40mm 90mm, clip, width=3.5in]{../../ssparc/kathleen/MSSTriServiceRadarSymp/LaTeXfiles/Figure2top}  % name it figure2.eps
+%\vspace{5mm}
+\caption{Measured and post-processed power spectral densities for the reference interference output without the desired signal, for a $P_{in}$ of 10 dBm}
+\label{fig_sim}
+\end{minipage}
+\quad
+\begin{minipage}[b]{0.45\linewidth}
+\includegraphics[trim=35mm 86mm 40mm 92mm, clip, width=3.5in]{../../ssparc/kathleen/MSSTriServiceRadarSymp/LaTeXfiles/Figure2bottom}  % name it figure2.eps
+%\vspace{5mm}
+\caption{Measured and post-processed power spectral densities for the test case output of interference plus desired signal, for a $P_{in}$ of 12 dBm}
+\label{fig_sim}
+\end{minipage}
+\end{figure}
+
+\begin{figure}[ht]
+\centering
+\begin{minipage}[b]{0.45\linewidth}
+\includegraphics[trim=35mm 87mm 35mm 90mm, clip, width=3.75in]{../../ssparc/kathleen/MSSTriServiceRadarSymp/LaTeXfiles/Figure3}  % name it figure3.eps
+\caption{Distortion improvements versus frequency offset for an orthogonal memory polynomial and a Volterra series for input powers of 10 and 12 dBm}
+\label{fig_sim}
+\end{minipage}
+\quad
+\begin{minipage}[b]{0.45\linewidth}
+\includegraphics[trim=5mm 79mm 5mm 87mm, clip, width=3.5in] {../../ssparc/kathleen/MSSTriServiceRadarSymp/LaTeXfiles/Figure4}  % name it figure4.eps
+\caption{Distortion improvement contours for an orthogonal memory polynomial, frequency offset $\sim$ 3.5 MHz, $P_{in}$ is 12 dBm}
+\label{fig_sim}
+\end{minipage}
+\end{figure}
+
+\subsubsection{Post-Processing of Measured Data}
+In Matlab, the samples of measured input and reference output data are used to compute model coefficients for the power amplifier for a Volterra model and an \OMP).  
+% An example of a floating figure using the graphicx package.
+% Note that \label must occur AFTER (or within) \caption.
+% For figures, \caption should occur after the \includegraphics.
+% Note that IEEEtran v1.7 and later has special internal code that
+% is designed to preserve the operation of \label within \caption
+% even when the captionsoff option is in effect. However, because
+% of issues like this, it may be the safest practice to put all your
+% \label just after \caption rather than within \caption{}.
+%
+% Reminder: the "draftcls" or "draftclsnofoot", not "draft", class
+% option should be used if it is desired that the figures are to be
+% displayed while in draft mode.
+%
+%\begin{figure}[!t]
+%\centering
+%\includegraphics[width=2.5in]{myfigure}
+% where an .eps filename suffix will be assumed under latex, 
+% and a .pdf suffix will be assumed for pdflatex; or what has been declared
+% via \DeclareGraphicsExtensions.
+%\caption{Simulation Results}
+%\label{fig_sim}
+%\end{figure}
+
+% Note that IEEE typically puts floats only at the top, even when this
+% results in a large percentage of a column being occupied by floats.
+
+
+% An example of a double column floating figure using two subfigures.
+% (The subfig.sty package must be loaded for this to work.)
+% The subfigure \label commands are set within each subfloat command, the
+% \label for the overall figure must come after \caption.
+% \hfil must be used as a separator to get equal spacing.
+% The subfigure.sty package works much the same way, except \subfigure is
+% used instead of \subfloat.
+%
+%\begin{figure*}[!t]
+%\centerline{\subfloat[Case I]\includegraphics[width=2.5in]{subfigcase1}%
+%\label{fig_first_case}}
+%\hfil
+%\subfloat[Case II]{\includegraphics[width=2.5in]{subfigcase2}%
+%\label{fig_second_case}}}
+%\caption{Simulation results}
+%\label{fig_sim}
+%\end{figure*}
+%
+% Note that often IEEE papers with subfigures do not employ subfigure
+% captions (using the optional argument to \subfloat), but instead will
+% reference/describe all of them (a), (b), etc., within the main caption.
+
+
+% An example of a floating table. Note that, for IEEE style tables, the 
+% \caption command should come BEFORE the table. Table text will default to
+% \footnotesize as IEEE normally uses this smaller font for tables.
+% The \label must come after \caption as always.
+%
+%\begin{table}[!t]
+%% increase table row spacing, adjust to taste
+%\renewcommand{\arraystretch}{1.3}
+% if using array.sty, it might be a good idea to tweak the value of
+% \extrarowheight as needed to properly center the text within the cells
+%\caption{An Example of a Table}
+%\label{table_example}
+%\centering
+%% Some packages, such as MDW tools, offer better commands for making tables
+%% than the plain LaTeX2e tabular which is used here.
+%\begin{tabular}{|c||c|}
+%\hline
+%One & Two\\
+%\hline
+%Three & Four\\
+%\hline
+%\end{tabular}
+%\end{table}
+
+
+% Note that IEEE does not put floats in the very first column - or typically
+% anywhere on the first page for that matter. Also, in-text middle ("here")
+% positioning is not used. Most IEEE journals/conferences use top floats
+% exclusively. Note that, LaTeX2e, unlike IEEE journals/conferences, places
+% footnotes above bottom floats. This can be corrected via the \fnbelowfloat
+% command of the stfloats package.
+\begin{figure}[ht]
+\centering
+\begin{minipage}[b]{0.45\linewidth}
+\includegraphics[trim=10mm 80mm 10mm 75mm, clip, width=3.5in] {../../ssparc/kathleen/MSSTriServiceRadarSymp/LaTeXfiles/Figure5top}  % name it figure5.eps
+\caption{SINR for varying SNR of received signal and distance of radar before interference cancellation}
+\label{fig_sim}
+\end{minipage}
+\quad
+\begin{minipage}[b]{0.45\linewidth}
+\includegraphics[trim=10mm 80mm 10mm 78mm, clip, width=3.5in] {../../ssparc/kathleen/MSSTriServiceRadarSymp/LaTeXfiles/Figure5bottom}  % name it figure5.eps
+\caption{SINR for varying SNR of received signal and distance of radar after interference cancellation}
+\label{fig_sim}
+\end{minipage}
+\end{figure}
+Each model is used to generate an estimate of the nonlinear interference.  The difference signal equal to ``output \textendash\hspace{1pt} estimated'' is shown in Fig. 2, for an input power, $P_{in}$, of 10 dBm, without the desired signal. This difference estimates the improvement due to interference cancellation, as if a desired signal were present.  Similar traces are shown in Fig. 3 for a $P_{in}$ of 12 dBm, however, in this case, the ``output'' contains the desired signal plus the interference.  The \SINR may be obtained from an average of the desired signal level and an average of the signal level adjacent to the desired signal.  For example, the \SINR of the desired signal before post-processing of the output signal (red curve), is $\sim$ 4 dB.  After interference cancellation  (black curve), the \SINR of the desired signal is $\sim$ 22 dB, representing $\sim$ 18 dB of interference suppression.\par
+Fig. 4 compares the performance of the OMP and the Volterra model in a plot showing interference suppression, over a frequency offset range of 2.5 MHz \textendash\hspace{0.25pt} 7.5 MHz, where each plotted point represents an average over a 0.5-MHz bandwidth.    The OMP uses order K = 12 and  memory length M = 7 and the Volterra uses K = 5 and M = 4.  These models show the same trends for the different power levels shown.  Increasing the input power level causes more distortion; this increase in distortion leads to an increase in cancellation improvement.  Although the Volterra model achieves similar performance with lower order and memory length, it requires 1364 coefficients while the  OMP only requires 84 coefficients, representing a large increase in computational load and/or lookup table size.  \par
+Fig. 5 is a contour plot showing distortion improvement as a function of model order and memory length for an OMP corresponding to a 3.5-MHz offset.  This figure illustrates that increased modeling does not necessarily lead to better results, indicated by regions where increasing order or memory length does not improve performance.  
+In Figs. 6 and 7, the estimated model is used to relate interference suppression to \SINR and distance using a simple path loss model, as a function of varying amounts of AWGN at the receiver, \emph{i.e.}, versus receiver \SNR.  Figs. 6 and 7 show the data before and after interference cancellation, respectively.  By inspection of Fig. 6, without distortion correction, given a receiver \SNR of $\sim$ 21dB, a receiver target \SINR of 20 dB can be achieved when the radar is 300 km away from the receiver.  From Fig. 7, after distortion correction, the radar can be as near as $\sim$ 90 km, and maintain the same target \SINR of 20 dB and \SNR of $\sim$ 21 dB.  
+
+\subsection{Outlook and remaining work}
+
+
+\subsubsection{Conclusion}
+The results reported above show performance improvements due to cancellation of radar interference by a communications receiver and encourages further measurements and analyses.  
+The measured and post-processed data indicate non-optimized performance improvements of up to $\sim$ 18-dB interference suppression, which corresponds to a significant reduction in radar-communications separation.  Further work is necessary to include realistic system blocks, such as channel models, and radar power amplifiers.  Based on preliminary measurements and post-processing, radar interference cancellation by a communications receiver is a promising topic for further research relevant to SSPARC.
+
+\subsubsection{Future Work}
+Going forward:
+\begin{enumerate}
+\item Field testing 
+\item Test plan
+\begin{itemize}
+\item Measurements for realism 
+\item Field testing
+\end{itemize}
+\item Real-time processing
+\item Algorithm development
+\begin{itemize}
+\item New algorithms
+\item Interative vs matrix inversion
+\item FPGA implementations
+\end{itemize}
+\item Decision directed techniques to mitigate radar out-of-band interference to communications radios
+\end{enumerate}
+Extension to wider sampling bandwidths would improve the overall model and enable wider bandwidth applications.  Radar channel models and measurements of high power radar amplifiers are essential to customize the estimation model.  Decision-directed cancellation techniques or other enhancements could be implemented to improve performance as well \cite{Gregorio}.  \par
+Practical considerations and increased realism in scenarios might include consideration of constraints on amounts of side information, delayed side information, and computational load.  Future work on variations of receiver cancellation of nonlinear distortion, could include cooperation or collaboration from the transmitter, \emph{e.g.}, predistortion or notching specified bandwidths to enhance interference cancellation.
+
+\section{Administration}
+\subsection{Meetings/Discussions (Leidos/SAZE)}
+\subsection{Presentations}
+\subsection{Conferences}
+\begin{enumerate}
+\item[1.]
+60th Annual Meeting of the MSS Tri-Service Radar Symposium, Springfield, VA, July 21 -- 25, 2014, ``Receiver cancellation of radar in radio'' by K. L. Tokuda, J. H. Kim, R. J.  Baxley, J. S.  Kenney, and L. S. Cohen
+\item[2.]
+\end{enumerate}
+
+\bibliographystyle{IEEEtran}
+\bibliography{IEEEabrv,track}
+\end{document}
+
+

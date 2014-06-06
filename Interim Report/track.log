@@ -1,0 +1,63 @@
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdftex 2014.6.4)  4 JUN 2014 21:19
+entering extended mode
+**C:/Users/jkim802/Documents/ssparc/Interim*Report/Latex*Files/track.bib
+("C:/Users/jkim802/Documents/ssparc/Interim Report/Latex Files/track.bib"
+Overfull \hbox (21.24356pt too wide) in paragraph at lines 76--85
+[]\tenrm @ARTICLEczarnach82, AU-THOR = "Czarnach, R.", TI-TLE = " Re-cur-sive P
+ro-cess-ing by Non-CausalDigital|
+
+\hbox(6.94444+1.94444)x469.75499, glue set - 1.0
+.\hbox(0.0+0.0)x20.0
+.\tenrm @
+.\tenrm A
+.\tenrm R
+.\kern-0.83334
+.etc.
+
+[1{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}]
+Overfull \hbox (9.49365pt too wide) in paragraph at lines 278--286
+[]\tenrm @TECHREPORTref:blairBP97, AU-THOR = " W. D. Blair and M. Brandt-Pearce
+", TI-TLE = "Monopulse|
+
+\hbox(6.94444+1.94444)x469.75499, glue set - 1.0
+.\hbox(0.0+0.0)x20.0
+.\tenrm @
+.\tenrm T
+.\tenrm E
+.\tenrm C
+.etc.
+
+
+Overfull \hbox (1.95195pt too wide) in paragraph at lines 304--311
+[]\tenrm @INPROCEEDINGSmather90, AU-THOR = "Mather, J.", TI-TLE = "The In-cre-m
+en-tal Multi-Parameter|
+
+\hbox(6.94444+1.94444)x469.75499, glue set - 1.0
+.\hbox(0.0+0.0)x20.0
+.\tenrm @
+.\tenrm I
+.\tenrm N
+.\tenrm P
+.etc.
+
+
+Overfull \hbox (4.57703pt too wide) in paragraph at lines 319--324
+[]\tenrm @MISCmather:email, AU-THOR = "Mather, J.", NOTE = "Per-sonal cor-re-sp
+on-dance (E-mail)", MONTH|
+
+\hbox(7.5+2.5)x469.75499, glue set - 1.0
+.\hbox(0.0+0.0)x20.0
+.\tenrm @
+.\tenrm M
+.\tenrm I
+.\tenrm S
+.etc.
+
+[2])
+*
+! Emergency stop.
+<*> ...ssparc/Interim*Report/Latex*Files/track.bib
+                                                  
+End of file on the terminal!
+
+!  ==> Fatal error occurred, no output PDF file produced!

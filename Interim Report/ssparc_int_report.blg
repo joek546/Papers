@@ -1,0 +1,110 @@
+This is BibTeX, Version 0.99dThe top-level auxiliary file: ssparc_int_report.aux
+The style file: IEEEtran.bst
+Database file #1: IEEEabrv.bib
+Database file #2: track.bib
+You're missing a field part---line 459 of file track.bib
+ : AUTHOR=
+ :        ''Mokoke, Eric L. and Cohen, Lawrence S'',
+I'm skipping whatever remains of this entry
+You're missing a field part---line 476 of file track.bib
+ : author=
+ :        ''Cohen, L. and Daly, E. and DeGraaf, J. and Scheff, K.'',
+I'm skipping whatever remains of this entry
+You're missing a field part---line 484 of file track.bib
+ : author=
+ :        ''Lackpour, A. and Luddy, M. and Winters, J.'',
+I'm skipping whatever remains of this entry
+You're missing a field part---line 492 of file track.bib
+ : author=
+ :        ''Kogon, S.M. and Holder, E.J. and Williams, D.B.'',
+I'm skipping whatever remains of this entry
+You're missing a field part---line 501 of file track.bib
+ : author=
+ :        ''Omer, M. and Rimini, R. and Heidmann, P. and Kenney, J.S.'',
+I'm skipping whatever remains of this entry
+You're missing a field part---line 509 of file track.bib
+ : author=
+ :        ''Anding Zhu and Dooley, J. and Brazil, T.J.'',
+I'm skipping whatever remains of this entry
+You're missing a field part---line 517 of file track.bib
+ : author=
+ :        ''Ding, Lei and Zhou, G.T. and Morgan, D.R. and Zhengxiang Ma and Kenney, J.S. and Jaehyeong Kim and Giardina, C.R.'',
+I'm skipping whatever remains of this entry
+You're missing a field part---line 527 of file track.bib
+ : author=
+ :        ''Raich, R. and Hua Qian and Zhou, G.T.'',
+I'm skipping whatever remains of this entry
+You're missing a field part---line 537 of file track.bib
+ : author=
+ :        ''Anding Zhu and Pedro, J.C. and Cunha, Telmo Reis'',
+I'm skipping whatever remains of this entry
+You're missing a field part---line 547 of file track.bib
+ : author=
+ :        ''Gazda, J. and Drot\'{a}r, P. and Deumal, M. and Kocur, D. and Galajda, P. ``,
+I'm skipping whatever remains of this entry
+You're missing a field part---line 555 of file track.bib
+ : author=
+ :        ''F. Gregorio and Werner, S. and Cousseau, J. and Figueroa, J. and Wichmans, R.'',
+I'm skipping whatever remains of this entry
+Warning--string name "``wimax" is undefined
+--line 566 of file track.bib
+I was expecting a `,' or a `}'---line 566 of file track.bib
+ : author = ``wimax 
+ :                  Forum'',
+I'm skipping whatever remains of this entry
+You're missing a field part---line 575 of file track.bib
+ : author=
+ :        ''Tsimbinos, J. and Lever, K.V.'',
+I'm skipping whatever remains of this entry
+-- IEEEtran.bst version 1.13 (2008/09/30) by Michael Shell.
+-- http://www.michaelshell.org/tex/ieeetran/bibtex/
+-- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
+Warning--empty author in Cohen10
+Warning--empty title in Cohen10
+Warning--empty booktitle in Cohen10
+Warning--empty year in Cohen10
+Warning--empty author in Lackpour
+Warning--empty title in Lackpour
+Warning--empty booktitle in Lackpour
+Warning--empty year in Lackpour
+Warning--empty author in WiMAXForum
+Warning--empty title in WiMAXForum
+Warning--missing institution in WiMAXForum
+Warning--empty year in WiMAXForum
+Warning--empty author in Kogon
+Warning--empty title in Kogon
+Warning--empty booktitle in Kogon
+Warning--empty year in Kogon
+Warning--empty author in Omer
+Warning--empty title in Omer
+Warning--empty booktitle in Omer
+Warning--empty year in Omer
+Warning--empty title in Gazda
+Warning--empty year in Gazda
+Warning--empty author in Gregorio
+Warning--empty title in Gregorio
+Warning--empty journal in Gregorio
+Warning--empty year in Gregorio
+Warning--empty author in ZhuSimpl
+Warning--empty title in ZhuSimpl
+Warning--empty booktitle in ZhuSimpl
+Warning--empty year in ZhuSimpl
+Warning--empty author in Ding
+Warning--empty title in Ding
+Warning--empty journal in Ding
+Warning--empty year in Ding
+Warning--empty author in Raich
+Warning--empty title in Raich
+Warning--empty journal in Raich
+Warning--empty year in Raich
+Warning--empty author in Zhuprune
+Warning--empty title in Zhuprune
+Warning--empty journal in Zhuprune
+Warning--empty year in Zhuprune
+Warning--empty author in Tsimbinos94
+Warning--empty title in Tsimbinos94
+Warning--empty booktitle in Tsimbinos94
+Warning--empty year in Tsimbinos94
+
+Done.
+(There were 13 error messages)
