@@ -1,0 +1,46 @@
+\section{PAR Reduction for Signal Aggregation (Thrust 1)}
+\subsection{Detailed problem statement}
+
+When multiple signals are multiplexed, the aggregate signal will have a high probability of having a high \PAR.  This is a result of the Central Limit Theorem in that the sum distribution of the multiplexed signal approaches complex Gaussian.  Having a high \PAR means that the signal power is inefficient and prone to non-linear distortion from power amplifier.  However, a multiplexed signals have more degrees of freedom for lowering the \PAR.
+
+For any linear modulated signal, the signal can be generalized as set of linear equations $\mathbf{\tilde{x}}=\mathbf{Ax}$, where $\mathbf{A}$ is the linear modulation such as $\mathbf{A}=\mathbf{I}$ for single carrier, $\mathbf{A}=\mathbf{H}$ for Hadamard spreading (CDMA), $\mathbf{A}=\mathbf{Q}^H$ for OFDM, and etc.  Than multiplexed signals can be aggregated linearly as
+\begin{equation}
+\begin{aligned}
+\mathbf{\tilde{x}}&=\mathbf{A}_1\mathbf{x}_1+\mathbf{A}_2\mathbf{x}_2+\mathbf{A}_3\mathbf{x}_3+\cdots\\
+&=\sum_{p=1}^P\mathbf{A}_p\mathbf{x}_p
+\end{aligned}
+\label{aggsig}
+\end{equation}
+where $A$ is the linear modulation such as $A=I$ for single carrier, $A=H$ for Hadamard spreading (CDMA), $A=Q^H$ for OFDM, and ect.
+From \eqref{aggsig} we have three degree of freedom to optimize the aggregated signal in reducing the \PAR.  
+\begin{equation}
+{\mathbf{\tilde{x}}}=\sum_{p=1}^P\alpha_p\mathbf{A}_p\left(\mathbf{x}_p^{(k)}+\mathbf{\epsilon}_p^{(k)}\right)
+\label{xGen}
+\end{equation}
+where $\alpha_p\in\mathcal{A}_p$ is a set of combination value, $k\in \mathcal{K}$ is a set of alternate signal, and $\epsilon_p^{(k)}\in\mathcal{E}_p$ is a set of perturbed error values.  Each of these terms can be manipulated to optimize the \PAR.
+
+\PAR generally is defined by
+\begin{equation}
+PAR(\mathbf{x})=\frac{\Vert x \Vert^2_\infty}{\Vert x \Vert^2_2/N_x}
+\label{PARGen}
+\end{equation}
+where $\Vert\cdot\Vert_l$ denotes the $l$-norm of the vector.  Combining \eqref{xGen} and \eqref{PARGen} you get
+\begin{equation}
+PAR(\mathbf{\tilde{x}})=\frac{\Vert \sum_{p=1}^P\alpha_p\mathbf{A}_p\left(\mathbf{x}_p^{(k)}+\mathbf{\epsilon}_p^{(k)}\right) \Vert^2_\infty}{\Vert \sum_{p=1}^P\alpha_p\mathbf{A}_p\left(\mathbf{x}_p^{(k)}+\mathbf{\epsilon}_p^{(k)}\right) \Vert^2_2/N_x}
+\end{equation}
+A general \PAR reduction problem for any aggregated linear modulation signal can be written as
+\begin{equation}
+     \begin{aligned}
+      &\text{Minimize } & &\left\Vert\sum_{p=1}^P\alpha_pA_p\left(x_p^{(k)}+\epsilon_p^{(k)}\right)\right\Vert_\infty  \\
+      &\text{Subject to} &  &k\in \mathcal{K} \\
+      & & &\alpha_p\in\mathcal{A}_p\\
+      & & &\epsilon_p^{(k)}\in\mathcal{E}_p 
+     \end{aligned}
+\end{equation}
+
+There are number of approaches in dealing with this \PAR problem.  Each with it's advantages and disadvantages.  Many of these method such as clipping, coding, tone reservation, tone injection, active constellation extension
+
+In \cite{seung05} something something
+\subsubsection{Analytical/Simulation Results}
+\subsubsection{Lab results}
+\subsubsection{Outlook and remaining work}

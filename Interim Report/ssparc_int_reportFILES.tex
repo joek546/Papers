@@ -1,0 +1,133 @@
+%% input your files at line 100 below   6/6/14 8pm klt      
+%% your input file should contain just the \section formatting etc [the content after \begin{document} but before \bibitem's] as in your complete document
+%% merge your preample e.g. packages into this file
+\documentclass[11pt,onecolumn]{IEEEtran}
+
+\usepackage[margin=1in,headsep=19pt] {geometry}
+% pagesizing from George's radar w/ slight adj
+%\setlength{\oddsidemargin}{0.in}
+%\setlength{\evensidemargin}{0in}
+%\setlength{\textwidth}{6.5in}
+%\setlength{\textheight}{9in}
+\setlength{\topmargin}{-0.7in}
+%\renewcommand{\baselinestretch}{1.15}
+%\setlength{\parskip}{1ex}
+%\setlength{\itemsep}{1ex}
+%\setlength{\parindent}{5ex}
+%\pagenumbering{arabic}
+
+%
+\usepackage{amsmath, amsfonts, amssymb}		%Allow math, fonts, and symbols features
+\usepackage{cite}							%Bibtex citation
+
+%packages for figures and graphics
+\usepackage{graphicx}						%Allows to add figures
+\usepackage{psfrag,pstool}					%Overlay Matlab EPS figures with LaTex constructions
+\usepackage{epstopdf}						%Convert EPS figures to PDF
+
+\usepackage{psfig}							%George
+
+% klt temporary placeholder figures --- finals will be matlab in local Interim Rpt dir
+\graphicspath{../../kathleen/MSSTriServiceRadarSymp/LaTeXfiles/}
+\graphicspath{../../George/LaTeX/}
+%\DeclareGraphicsExtensions{.png,.pdf,.eps}    % conflicts with Joseph's matlabfrag (pcfrag pctool are the latex tools)
+% klt done temp figures
+
+\usepackage{fancyhdr}% http://ctan.org/pkg/fancyhdr
+\pagestyle{fancy}% Change page style to fancy
+%\fancyhf{}% Clear header/footer
+\fancyhead[C]{\textbf{Spectral and Spatial Artifact Suppression for RF Devices} - {June 2014 Interim Status Report}\\
+DARPA-BAA-13-24 DARPA SSPARC; Contract No. HR0011-14-C-0025}
+
+\usepackage{abbrevs}						%Easy management of all the abbreviations
+\newabbrev\SSPARC{shared spectrum access between radar and communications (SSPARC)}[SSPARC]
+\newabbrev\SSAS{spectral and spatial artifact suppression for RF devices}
+\newabbrev\RF{radio frequency (RF)}[RF]
+\newabbrev\PAR{peak-to-average power ratio (PAR)}[PAR]
+\newabbrev\PA{power amplifier (PA)}[PA]
+\newabbrev\OMP{orthogonal memory polynomial (OMP)}[OMP]
+\newabbrev\SINR{signal-to-interference-plus-noise ratio (SINR)}[SINR]
+\newabbrev\SNR{signal-to-noise ratio (SNR)}[SNR]
+\newabbrev\OFDM{orthogonal frequency-division multiplexing}[OFDM]
+\newabbrev\AWGN{additive white Gaussian noise (AWGN)}[AWGN]
+
+\newabbrev\CM{constant modulus (CM)}[CM]
+
+\usepackage{fancyheadings} % need this for the headings stuff
+\pagestyle{fancyplain} % need this for the headings stuff
+% \the\baselineskip prints the vspace in a single line skip for this doc
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\title{\Large{\textbf{Spectral and Spatial Artifact Suppression for RF Devices}\\
+DARPA-BAA-13-24 DARPA SSPARC}}
+\begin{document}
+\vspace*{6.6923pt}   % * is required for vspace to work at the top of the page
+%\maketitle  % overwrites the header with a title on pg 1
+\noindent\textbf{Spectral and Spatial Artifact Suppression for RF Devices}\\
+June 2014 Interim Status Report\\
+09 October 2013 -- 30 June 2014\\
+DARPA SSPARC Phase I Task 3\\
+Contract Number HR0011-14-C-0025\\
+\vspace{13.3846pt}
+
+\noindent\begin{minipage}[b]{0.45\linewidth}
+\textbf{\underline{DARPA Program Manager:}}\\
+Dr. John Chapin\\
+Program Manager\\
+Strategic Technology Office\\
+DARPA\\
+703-248-1533\\
+john.chapin@darpa.mil\\	
+\vspace{13.3846pt}   % 1.2*11pt*
+\vspace{13.3846pt}
+\end{minipage}
+\hspace{0.5cm}
+\noindent\begin{minipage}[b]{0.45\linewidth}
+\textbf{\underline{GTRI Principal Investigator:}}\\
+Dr. Bob Baxley\\
+Senior Research Engineer\\
+Information and Communications Laboratory\\
+Georgia Tech Research Institute\\
+250 14th Street, Rm. 585\\
+Atlanta, GA 30332-0821\\
+404-407-7525\\
+baxley@gatech.edu\\
+\end{minipage}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%                                                                                %%%%%%
+%%%%                            begin file input                             %%%%%%
+%%%%   comment out sections you don't want to compile %%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\input{SummaryIntroFILE.tex}
+\section{SSAS Project Status}
+\input{Thrust1aggreFILE.tex}
+\subsection{Thrust 2:  Spatial Shaping with Nonlinear Components}
+\subsubsection{Detailed problem statement}
+\subsubsection{Analytical/Simulation Results}
+\subsubsection{Lab results}
+\subsubsection{Outlook and remaining work}
+%\input{../../George/LaTeX/radarFILE.tex}
+%\input{radarFILE.tex}
+%\input{Thrust3rxFILE.tex}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%                                                                              %%%%%%
+%%%%                             end  file input                           %%%%%%
+%%%%                                                                              %%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Administration}
+\subsection{Meetings/Discussions (Leidos/SAZE)}
+\subsection{Presentations}
+\subsection{Conferences}
+\begin{enumerate}
+\item[1.]
+60th Annual Meeting of the MSS Tri-Service Radar Symposium, Springfield, VA, July 21 -- 25, 2014, ``Receiver cancellation of radar in radio'' by K. L. Tokuda, J. H. Kim, R. J.  Baxley, J. S.  Kenney, and L. S. Cohen
+\item[2.]
+\end{enumerate}
+
+\bibliographystyle{IEEEtran}
+\bibliography{IEEEabrv,track}
+\end{document}
+
+
