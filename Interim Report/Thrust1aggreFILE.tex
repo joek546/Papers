@@ -38,9 +38,47 @@ A general \PAR reduction problem for any aggregated linear modulation signal can
      \end{aligned}
 \end{equation}
 
-There are number of approaches in dealing with this \PAR problem.  Each with it's advantages and disadvantages.  Many of these method such as clipping, coding, tone reservation, tone injection, active constellation extension
+There are number of approaches in dealing with this \PAR problem.  Many of the proposed methods such as clipping, coding, \TR, \TI, \ACE, and multiple signal representation techniques achieve \PAR reduction in the expanses of other signal characteristics like \BER, data rate lost, computational complexity, and so on.  In \cite{seung05} an overview of many of these techniques have been conducted.
 
-In \cite{seung05} something something
+\subsection{Radar Spreading}
+\SSPARC requires the mitigation of radar interference on the communication signal. One approach of this is to orthogonalize the communication and the radar signal.  Spectral spreading the communication signal ${\mathbf{x}\in \mathbb{C}^{N_x}}$ with the radar signal $\mathbf{r}\in \mathbb{C}^{N_r}$ is one way to approximate this orthogonalization.  The spread transmitted signal will be
+\begin{equation}
+\mathbf{y}=\mathbf{F}_r \mathbf{x}\\
+\label{eq1}
+\end{equation}  
+where $\mathbf{x}$ is the communication constellation symbols, $\mathbf{F}_r$ is the circulant matrix of the radar signal.  To maintain the proper size of the signal, $N_x\geq N_r$, and $\mathbf{F}_r$ is a circular convolution with zero padding of$N_x-N_r$ to be $N_x\times N_x$ matrix.
+
+The receiver will receive the signal
+\begin{equation}
+\mathbf{z}=\mathbf{F}_h \mathbf{F}_r \mathbf{x} +\beta[\mathbf{r},0,0,\dots,0,0]^T +\mathbf{n}\\
+\label{eq2}
+\end{equation} 
+where $\mathbf{F}_h$ is the channel effect, The radar signal $\mathbf{r}$ is zero padded to match the size of the communication signal.
+
+Radar signals are generally composed of pulse compression waveform in order to decouple the range resolution and signal energy.  This pulse compression waveform of the radar signal allows for the following proprieties:
+\begin{equation}
+\mathbf{F}_r^H \mathbf{r} \approx [1,0,0,\dots,0,0]^T\approx\mathbf{0} \\
+\label{prop1}
+\end{equation}
+\begin{equation}
+\mathbf{F}_r^H \mathbf{F}_r \approx \mathbf{I}
+\label{prop2}
+\end{equation}
+$H$ denotes the Hermitian conjugate of matrix and $T$ denote the Transpose of the matrix.  The Hermitian conjugate of a circulant matrix is equal to the matched filter convolution matrix. \eqref{prop1} 
+
+The de-spreading of the signal is done by
+\begin{equation}
+\mathbf{\hat{x}}=\mathbf{F}^H\mathbf{z}
+\end{equation}
+using the radar proprieties from \eqref{prop1} and \eqref{prop2} you get
+\begin{equation}
+=\mathbf{F}_h\mathbf{x}+\boldsymbol{\beta}[h,0,0,\dots,0,0]^T+\mathbf{F}^H\mathbf{n}
+\end{equation} 
+
+This shows that radar signal $\boldsymbol{\beta}$ has compressed, mitigating the interference to just few samples.  However there is a problem with this mitigation.  The \PAR of the signal is very high.  
+
+The high \PAR causes nonlinear distortion when the signals come close to or exceeds the saturation level of the power amplifier.  To resolve this problem, several options were considered and analyzed.
+
 \subsubsection{Analytical/Simulation Results}
 \subsubsection{Lab results}
 \subsubsection{Outlook and remaining work}
